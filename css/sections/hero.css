@@ -1,0 +1,157 @@
+/* ============================================
+   HERO — Magazine cover
+   ============================================ */
+.hero {
+  position: relative;
+  padding: 40px 0 120px;
+  overflow: hidden;
+  background: var(--off-white);
+}
+.hero__bg { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.hero__bg .blob--pink   { top: -120px; right: -100px; opacity: 0.18; }
+.hero__bg .blob--yellow { bottom: 5%; left: -100px; opacity: 0.22; width: 280px; height: 280px; }
+.hero__bg .blob--teal   { top: 40%; right: 8%; width: 140px; height: 140px; opacity: 0.3; }
+
+.hero__rail {
+  position: absolute;
+  top: 0; bottom: 0; left: 24px;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+  z-index: 2;
+}
+.hero__rail-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--navy-deep);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  opacity: 0.55;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding-left: 40px;
+}
+
+.hero__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.hero__kicker-num { color: var(--pink-hot); font-size: 1rem; font-weight: 700; }
+.hero__kicker-divider { width: 32px; height: 1px; background: var(--navy-deep); opacity: 0.3; }
+
+.hero__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(3rem, 7.5vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  color: var(--navy-deep);
+  margin-bottom: 28px;
+}
+.hero__title-script { display: block; font-style: normal; font-weight: 700; }
+.hero__title-bold   { display: block; font-weight: 800; position: relative; }
+.hero__title-bold::after {
+  content: '';
+  position: absolute;
+  bottom: 0.12em; left: 0;
+  width: 1.2em; height: 0.18em;
+  background: var(--yellow-gold);
+  z-index: -1;
+  opacity: 0.7;
+  transform: skewX(-12deg);
+}
+
+.hero__lead {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: var(--gray-text);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--gray-light);
+  max-width: 540px;
+}
+.hero__meta-item   { display: flex; flex-direction: column; gap: 4px; }
+.hero__meta-num    { font-family: var(--font-display); font-weight: 700; font-size: 1.5rem; color: var(--navy-deep); line-height: 1; }
+.hero__meta-label  { font-family: var(--font-mono); font-size: 0.66rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+.hero__meta-divider{ width: 1px; height: 36px; background: var(--gray-light); }
+
+.hero__art {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  min-height: 0;
+  margin-top: -80px;
+}
+.hero__shape {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 90%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, var(--blue-pale) 0%, transparent 65%);
+  border-radius: 50%;
+  animation: floatLg 12s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero__illustration {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  object-fit: contain;
+  filter: drop-shadow(0 30px 60px rgba(37, 99, 235, 0.25));
+  animation: floatSm 6s ease-in-out infinite;
+}
+.hero__sticker { position: absolute; font-family: var(--font-display); font-weight: 700; pointer-events: none; z-index: 3; }
+.hero__sticker--1 { top: 8%;  right: 6%;  font-size: 2.5rem; color: var(--yellow-gold); animation: spin 8s linear infinite; }
+.hero__sticker--2 { bottom: 12%; left: 4%; font-size: 2rem;   color: var(--pink-hot);   animation: floatSm 4s ease-in-out infinite; }
+.hero__sticker--3 { top: 50%; right: -2%; font-size: 1.5rem;  color: var(--teal);       animation: floatSm 5s ease-in-out infinite reverse; }
+
+@keyframes floatLg {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50%       { transform: translate(8px, -16px) scale(1.05); }
+}
+@keyframes floatSm {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}

@@ -1,0 +1,117 @@
+/* ============================================
+   SOBRE — Editorial article
+   ============================================ */
+.section--about {
+  background: var(--white);
+  padding: clamp(80px, 12vw, 160px) 0;
+}
+.about__layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: start;
+}
+.about__left {
+  position: sticky;
+  top: 120px;
+  display: flex;
+  flex-direction: column;
+}
+.about__photo-wrap {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 12px 48px rgba(26, 36, 114, 0.18);
+  margin-bottom: 20px;
+}
+.about__photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+}
+.about__right {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.about__side { position: static; }
+
+.about__label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink-hot);
+  margin-bottom: 24px;
+}
+.about__name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  color: var(--navy-deep);
+  margin-bottom: 20px;
+}
+.about__name em { font-style: normal; font-weight: 800; }
+.about__name-hl { position: relative; display: inline-block; z-index: 1; }
+.about__name-hl::before {
+  content: '';
+  position: absolute;
+  left: -4px; right: -6px;
+  bottom: -0.08em;
+  height: 0.4em;
+  z-index: -1;
+  border-radius: 4px;
+  transform: skewX(-6deg);
+  background: rgba(34, 211, 238, 0.4);
+}
+.about__role {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.about__line {
+  width: 80px;
+  height: 3px;
+  background: var(--grad-warm);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+.about__pull {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  color: var(--navy-deep);
+  font-weight: 500;
+  position: relative;
+  padding-left: 24px;
+  border-left: 3px solid var(--pink-hot);
+}
+
+.about__body p { font-size: 1.08rem; line-height: 1.85; color: var(--gray-text); margin-bottom: 1.4em; }
+.about__body strong { color: var(--navy-deep); font-weight: 600; }
+.about__intro { font-size: 1.2rem !important; color: var(--navy-deep) !important; font-weight: 400 !important; }
+
+.dropcap {
+  font-family: var(--font-display);
+  float: left;
+  font-size: 5.5rem;
+  line-height: 0.85;
+  font-weight: 800;
+  font-style: italic;
+  margin: 4px 14px -4px 0;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}

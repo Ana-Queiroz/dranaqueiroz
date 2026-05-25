@@ -1,0 +1,288 @@
+/* ============================================
+   RESPONSIVE — Breakpoints globais
+   ============================================ */
+
+/* --- Large tablets / small desktops (< 1140px) --- */
+@media (max-width: 1140px) {
+  .container { padding: 0 28px; }
+  .header__inner { padding: 16px 28px; }
+
+  .hero__inner { grid-template-columns: 1fr; gap: 56px; padding-left: 24px; }
+  .hero__art   { max-width: 440px; margin: 0 auto; align-self: center; }
+  .hero__rail  { left: 12px; }
+
+  .about__layout { grid-template-columns: 1fr; gap: 48px; }
+  .about__left   { position: static; }
+
+  .diff-pill { padding: 26px 32px; }
+
+  .contato-line { grid-template-columns: 56px 130px 1fr auto; }
+}
+
+/* --- Tablets (< 960px) --- */
+@media (max-width: 960px) {
+  body { font-size: 15.5px; }
+  .section { padding: clamp(64px, 10vw, 120px) 0; }
+  .section__header { margin-bottom: 56px; }
+
+  /* Header / nav */
+  .nav-toggle { display: flex; }
+  .nav {
+    position: absolute;
+    top: 100%; left: 0; right: 0;
+    background: var(--white);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+  .nav.is-open { max-height: 600px; }
+  .nav ul { flex-direction: column; align-items: stretch; padding: 16px; gap: 4px; }
+  .nav a { width: 100%; padding: 14px 18px; }
+  .nav-cta { text-align: center; padding: 14px 18px !important; }
+
+  /* Hero */
+  .hero__title { font-size: clamp(2.5rem, 7.5vw, 4.25rem); }
+  .hero__meta  { gap: 20px; flex-wrap: wrap; }
+
+  /* FAQ */
+  .faq__layout { grid-template-columns: 1fr; gap: 48px; }
+  .faq__side   { position: static; }
+
+  /* Missão */
+  .split { grid-template-columns: 1fr; }
+
+  /* Áreas */
+  .areas-tabs { grid-template-columns: 1fr; gap: 0; }
+  .areas-tabs__list { display: none; }
+  .areas-tabs__panel { min-height: 0; border-radius: 0 0 var(--radius-lg) var(--radius-lg); padding-top: 28px; }
+  .areas__deco { display: none; }
+  .areas-tabs__dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: var(--off-white);
+    padding: 20px 24px 0;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  }
+  .areas-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gray-light);
+    border: 0; padding: 0;
+    cursor: pointer;
+    transition: background var(--transition), width var(--transition);
+  }
+  .areas-dot.is-active { background: var(--pink-hot); width: 28px; border-radius: 4px; }
+  .area-detail__art { width: 84px; height: 84px; margin-bottom: 24px; }
+
+  /* Diferenciais */
+  .diff-pills { gap: 12px; }
+  .diff-pill  { padding: 24px 28px; }
+
+  /* Contato */
+  .contato-line { grid-template-columns: 52px 1fr auto; gap: 18px; }
+  .contato-line__label { display: none; }
+  .contato__horarios { padding: 24px 28px; }
+}
+
+/* --- Mobile (< 720px) --- */
+@media (max-width: 720px) {
+  .container { padding: 0 20px; }
+  .header__inner { padding: 14px 20px; gap: 12px; }
+
+  /* Hero */
+  .hero { padding: 64px 0 80px; }
+  .hero__rail  { display: none; }
+  .hero__inner { padding-left: 0; gap: 36px; }
+  .hero__title { font-size: clamp(2.25rem, 9vw, 3.25rem); margin-bottom: 20px; }
+  .hero__title-bold::after { height: 0.14em; }
+  .hero__lead   { font-size: 1rem; margin-bottom: 28px; }
+  .hero__kicker { gap: 10px; margin-bottom: 22px; font-size: 0.72rem; }
+  .hero__kicker-divider { width: 24px; }
+  .hero__actions { flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 36px; }
+  .hero__actions .btn { width: 100%; }
+  .hero__actions .btn-link { justify-content: center; }
+  .hero__meta   { gap: 14px; padding-top: 24px; }
+  .hero__meta-divider { display: none; }
+  .hero__meta-num { font-size: 1.2rem; }
+  .hero__sticker--1, .hero__sticker--2, .hero__sticker--3 { font-size: 1.4rem; }
+  .hero__sticker--1 { top: 4%; right: 4%; }
+  .hero__sticker--2 { bottom: 6%; left: 2%; }
+  .hero__sticker--3 { display: none; }
+
+  /* About */
+  .about__name  { font-size: clamp(2rem, 8vw, 2.75rem); }
+  .about__left  { position: static; }
+  .dropcap      { font-size: 4rem; margin: 4px 10px -2px 0; }
+  .about__intro { font-size: 1.08rem !important; }
+  .about__body p{ font-size: 1rem; }
+
+  /* Timeline */
+  .timeline { padding-left: 44px; }
+  .timeline::before { left: 16px; }
+  .timeline__marker { left: -38px; width: 18px; height: 18px; }
+  .timeline__title  { font-size: 1.4rem; }
+
+  /* Manifesto */
+  .manifesto__quote { font-size: clamp(1.25rem, 4.8vw, 1.85rem); line-height: 1.5; }
+  .manifesto__hl    { white-space: normal; }
+  .manifesto__label { font-size: 0.7rem; margin-bottom: 28px; }
+
+  /* Áreas */
+  .area-detail__title { font-size: 1.6rem; }
+  .area-detail__text  { font-size: 1rem; }
+
+  /* Diferenciais */
+  .diff-pill       { padding: 22px 26px; border-radius: 32px; flex: 1 1 260px; }
+  .diff-pill__title{ font-size: 1.15rem; }
+  .diff-pill__desc { font-size: 0.85rem; }
+
+  /* FAQ */
+  .faq-item__question { padding: 22px 0; gap: 14px; }
+  .faq-item__q        { font-size: 1.05rem; }
+  .faq-item__answer   { padding: 0 0 24px 38px; font-size: 0.98rem; }
+  .faq-item__icon     { width: 32px; height: 32px; }
+
+  /* Missão */
+  .split__panel     { padding: 0 28px; min-height: auto; }
+  .split__text      { font-size: 1.25rem; }
+  .split__signature { font-size: 0.95rem; }
+
+  /* Contato */
+  .contato__horarios { flex-direction: column; align-items: flex-start; padding: 24px; gap: 12px; }
+  .contato-line       { grid-template-columns: 44px 1fr auto; gap: 14px; padding: 20px 8px; }
+  .contato-line:hover { padding-left: 14px; padding-right: 14px; }
+  .contato-line__icon { width: 44px; height: 44px; }
+  .contato-line__value{ font-size: 1rem; }
+  .contato-line__arrow{ font-size: 1.2rem; }
+
+  /* CTA */
+  .cta__inner   { padding: 72px 20px; }
+  .cta__title   { font-size: clamp(2.25rem, 8.5vw, 3.5rem); margin-bottom: 20px; }
+  .cta__lead    { font-size: 1rem; margin-bottom: 32px; }
+  .cta__actions { flex-direction: column; align-items: stretch; gap: 16px; }
+  .cta__actions .btn     { width: 100%; }
+  .cta__actions .btn-link{ justify-content: center; }
+  .marquee__track { font-size: 1rem; gap: 24px; }
+  .marquee { padding: 14px 0; }
+
+  /* Footer */
+  .footer { padding: 48px 0 28px; }
+  .footer__top  { flex-direction: column; gap: 16px; }
+  .footer__crm  { text-align: left; }
+  .footer__mid  { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .footer__nav  { flex-direction: column; gap: 12px; }
+
+  /* WhatsApp float */
+  .whatsapp-float { width: 54px; height: 54px; bottom: 18px; right: 18px; }
+}
+
+/* --- Small mobile (< 480px) --- */
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .header__inner { padding: 12px 16px; gap: 10px; }
+
+  .brand { gap: 10px; }
+  .brand__mark  { width: 44px; height: 44px; margin-top: -6px; }
+  .brand__name  { font-size: 1rem; }
+  .brand__role  { font-size: 0.56rem; letter-spacing: 0.12em; }
+
+  .section { padding: clamp(56px, 12vw, 88px) 0; }
+  .section__header { margin-bottom: 44px; }
+  .section__title  { font-size: clamp(1.85rem, 7.5vw, 2.4rem); }
+
+  /* Hero */
+  .hero { padding: 48px 0 64px; }
+  .hero__inner  { gap: 28px; }
+  .hero__art    { display: none; }
+  .hero__title  { font-size: clamp(2rem, 10vw, 2.75rem); line-height: 1; }
+  .hero__lead   { font-size: 0.95rem; line-height: 1.6; }
+  .hero__kicker { flex-wrap: wrap; gap: 6px; font-size: 0.66rem; }
+  .hero__kicker-divider { display: none; }
+  .hero__meta   { gap: 16px; flex-wrap: wrap; justify-content: flex-start; padding-top: 20px; }
+  .hero__meta-num  { font-size: 1.1rem; }
+  .hero__meta-label{ font-size: 0.6rem; }
+
+  /* About */
+  .about__name  { font-size: 2.1rem; line-height: 0.98; }
+  .dropcap      { font-size: 3.5rem; margin: 2px 10px -4px 0; }
+  .about__pull  { font-size: 1rem; padding-left: 18px; }
+
+  /* Timeline */
+  .timeline { padding-left: 40px; }
+  .timeline::before { left: 14px; }
+  .timeline__marker { left: -36px; width: 16px; height: 16px; }
+  .timeline__title  { font-size: 1.25rem; }
+  .timeline__list li{ font-size: 0.92rem; }
+
+  /* Manifesto */
+  .manifesto__quote    { font-size: 1.2rem; line-height: 1.55; }
+  .manifesto__label    { font-size: 0.66rem; }
+  .manifesto__signature{ font-size: 0.95rem; }
+
+  /* Áreas */
+  .areas-tabs__panel { padding: 28px 24px; }
+  .area-detail__art  { width: 72px; height: 72px; margin-bottom: 20px; }
+  .area-detail__title{ font-size: 1.4rem; }
+  .area-detail__text { font-size: 0.95rem; }
+
+  /* Diferenciais */
+  .diff-pills   { gap: 10px; }
+  .diff-pill    { flex: 1 1 100%; max-width: 100%; padding: 20px 24px; border-radius: 28px; }
+  .diff-pill__title{ font-size: 1.1rem; }
+  .diff-pill__desc { font-size: 0.84rem; }
+
+  /* FAQ */
+  .faq-item__question { padding: 20px 0; gap: 10px; }
+  .faq-item__num  { font-size: 0.7rem; }
+  .faq-item__q    { font-size: 1rem; }
+  .faq-item__answer{ padding: 0 0 22px 32px; font-size: 0.95rem; }
+
+  /* Missão */
+  .split__panel { padding: 0 22px; min-height: auto; }
+  .split__text  { font-size: 1.15rem; line-height: 1.45; }
+
+  /* Contato */
+  .contato-line { padding: 18px 4px; gap: 12px; }
+  .contato-line:hover { padding-left: 8px; padding-right: 8px; }
+  .contato-line__icon { width: 40px; height: 40px; }
+  .contato-line__value{ font-size: 0.9rem; word-break: break-word; }
+  .contato__horarios  { padding: 20px 20px; }
+  .contato__horarios-text{ font-size: 0.95rem; }
+
+  /* CTA */
+  .cta__inner  { padding: 56px 16px; }
+  .cta__title  { font-size: clamp(2rem, 10vw, 2.5rem); }
+  .cta__lead   { font-size: 0.95rem; }
+  .marquee__track{ font-size: 0.95rem; gap: 20px; }
+  .marquee { padding: 12px 0; }
+
+  /* Footer */
+  .footer__name  { font-size: 1.35rem; }
+  .footer__slogan{ font-size: 0.95rem; }
+  .footer__crm   { font-size: 0.7rem; }
+
+  /* WhatsApp float */
+  .whatsapp-float { width: 50px; height: 50px; bottom: 14px; right: 14px; }
+}
+
+/* --- Extra small (< 360px) --- */
+@media (max-width: 360px) {
+  .container { padding: 0 14px; }
+  .header__inner { padding: 10px 14px; }
+  .brand__name { font-size: 0.92rem; }
+  .brand__role { display: none; }
+
+  .hero__title  { font-size: 1.85rem; }
+  .section__title{ font-size: 1.75rem; }
+  .about__name  { font-size: 1.85rem; }
+  .cta__title   { font-size: 1.9rem; }
+}
+
+/* --- Landscape phones (height-sensitive) --- */
+@media (max-height: 480px) and (orientation: landscape) {
+  .hero { padding: 40px 0 56px; }
+  .nav.is-open { max-height: 80vh; overflow-y: auto; }
+}

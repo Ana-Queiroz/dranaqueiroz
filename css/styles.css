@@ -1,0 +1,21 @@
+/* ============================================
+   Dra. Ana Carolina Queiroz — Pediatra
+   Entry point — importa todos os módulos CSS
+   ============================================ */
+
+@import url('base.css');
+@import url('header.css');
+
+@import url('sections/hero.css');
+@import url('sections/sobre.css');
+@import url('sections/formacao.css');
+@import url('sections/abordagem.css');
+@import url('sections/areas.css');
+@import url('sections/diferenciais.css');
+@import url('sections/faq.css');
+@import url('sections/missao.css');
+@import url('sections/cta.css');
+@import url('sections/contato.css');
+
+@import url('footer.css');
+@import url('responsive.css');

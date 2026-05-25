@@ -1,0 +1,150 @@
+/* ============================================
+   ÁREAS — Interactive tabs
+   ============================================ */
+.section--areas { background: var(--white); position: relative; overflow: hidden; }
+.areas__deco {
+  position: absolute;
+  top: 10%; right: -120px;
+  width: 380px; height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--blue-pale) 0%, transparent 70%);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.areas-tabs {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) 1.5fr;
+  gap: clamp(40px, 6vw, 80px);
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: start;
+  position: relative;
+  z-index: 1;
+}
+
+.areas-tabs__list { display: flex; flex-direction: column; border-left: 1px solid var(--gray-light); }
+
+.areas-tab {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  text-align: left;
+  padding: 24px 28px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--gray-light);
+  cursor: pointer;
+  transition: padding var(--transition), color var(--transition), background var(--transition);
+  color: var(--text-muted);
+}
+.areas-tab:first-child { border-top: 1px solid var(--gray-light); }
+.areas-tab__num {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--gray-mid);
+  transition: color var(--transition);
+}
+.areas-tab__label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+  transition: color var(--transition);
+}
+.areas-tab__indicator {
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: rgba(37, 99, 235, 0.15);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform var(--transition);
+  overflow: hidden;
+}
+.areas-tab__indicator::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--grad-accent);
+  transform-origin: top center;
+  transform: scaleY(0);
+}
+.areas-tab.is-active .areas-tab__indicator::after {
+  animation: areaProgress 5000ms linear forwards;
+}
+.areas-tabs.is-paused .areas-tab.is-active .areas-tab__indicator::after,
+.areas-tabs:hover .areas-tab.is-active .areas-tab__indicator::after {
+  animation-play-state: paused;
+}
+@keyframes areaProgress {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+.areas-tab:hover { background: var(--off-white); color: var(--navy-deep); }
+.areas-tab:hover .areas-tab__num { color: var(--pink-hot); }
+.areas-tab.is-active { background: var(--off-white); padding-left: 38px; }
+.areas-tab.is-active .areas-tab__label { color: var(--navy-deep); font-style: italic; }
+.areas-tab.is-active .areas-tab__num { color: var(--pink-hot); }
+.areas-tab.is-active .areas-tab__indicator { transform: scaleY(1); }
+
+.areas-tabs__panel {
+  position: relative;
+  min-height: 400px;
+  padding: clamp(32px, 4vw, 56px);
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.areas-tabs__panel::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 160px; height: 160px;
+  border-radius: 50%;
+  background: var(--pink-pale);
+  opacity: 0.7;
+  z-index: 0;
+}
+.areas-tabs__panel::after {
+  content: '';
+  position: absolute;
+  bottom: -70px; left: -70px;
+  width: 200px; height: 200px;
+  border-radius: 50%;
+  background: var(--yellow-pale);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.area-detail {
+  display: none;
+  opacity: 0;
+  animation: fadeIn 500ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  position: relative;
+  z-index: 1;
+}
+.area-detail.is-active { display: block; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.area-detail__art { width: 100px; height: 100px; margin-bottom: 32px; filter: drop-shadow(0 10px 24px rgba(26, 36, 114, 0.2)); }
+.area-detail__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.85rem, 3.6vw, 2.6rem);
+  line-height: 1.1;
+  color: var(--navy-deep);
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+.area-detail__text { font-size: 1.08rem; line-height: 1.7; color: var(--gray-text); max-width: 540px; }
+
+.areas-tabs__dots { display: none; }

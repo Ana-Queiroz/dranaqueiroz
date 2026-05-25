@@ -1,0 +1,82 @@
+/* ============================================
+   ABORDAGEM — Full-bleed manifesto
+   ============================================ */
+.section--abordagem {
+  background: var(--navy-deep);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(100px, 14vw, 180px) 0;
+}
+.manifesto__decor { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.manifesto__decor .blob--pink   { top: -100px; right: -50px;  width: 380px; height: 380px; opacity: 0.22; }
+.manifesto__decor .blob--yellow { bottom: -80px; left: -50px; width: 280px; height: 280px; opacity: 0.18; }
+.manifesto__decor .blob--teal   { top: 40%; right: 8%;        width: 200px; height: 200px; opacity: 0.25; }
+
+.manifesto {
+  position: relative;
+  max-width: 1000px;
+  z-index: 1;
+  text-align: center;
+}
+.manifesto__label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink-light);
+  margin-bottom: 36px;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.manifesto__label::before,
+.manifesto__label::after {
+  content: '';
+  display: inline-block;
+  width: 24px; height: 1px;
+  background: var(--pink-light);
+}
+.manifesto__quote {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.5vw, 3rem);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  margin-bottom: 48px;
+}
+.manifesto__quote em { font-style: italic; color: var(--yellow-gold); }
+
+.manifesto__hl {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  font-style: italic;
+  white-space: nowrap;
+}
+.manifesto__hl::before {
+  content: '';
+  position: absolute;
+  left: -6px; right: -6px;
+  bottom: 0.12em;
+  height: 0.5em;
+  z-index: -1;
+  border-radius: 4px;
+  transform: skewX(-6deg);
+}
+.manifesto__hl--pink::before   { background: rgba(236, 72, 153, 0.4); }
+.manifesto__hl--yellow::before { background: rgba(251, 191, 36, 0.35); }
+.manifesto__hl--teal::before   { background: rgba(34, 211, 238, 0.35); }
+
+.manifesto__signature {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: var(--pink-light);
+  opacity: 0.85;
+  letter-spacing: 0.04em;
+}

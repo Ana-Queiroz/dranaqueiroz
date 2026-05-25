@@ -1,0 +1,132 @@
+/* ============================================
+   CONTATO — Editorial mega block
+   ============================================ */
+.section--contato { background: var(--white); position: relative; overflow: hidden; }
+.contato__header {
+  text-align: center;
+  margin-bottom: 64px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contato__header .eyebrow { color: #0E7490; background: var(--teal-pale); }
+
+.contato-frase {
+  max-width: 900px;
+  margin: 0 auto 56px;
+  padding: 40px 0;
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+  text-align: center;
+}
+.contato-frase__texto {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.8vw, 2rem);
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--navy-deep);
+  letter-spacing: -0.01em;
+}
+.contato-frase__texto em {
+  font-style: italic;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.contato-grid { max-width: 900px; margin: 0 auto 64px; display: flex; flex-direction: column; }
+
+.contato-line {
+  display: grid;
+  grid-template-columns: 56px 140px 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 16px;
+  border-bottom: 1px solid var(--gray-light);
+  transition: padding var(--transition), background var(--transition);
+}
+.contato-line:hover { padding-left: 28px; padding-right: 28px; background: var(--off-white); }
+
+.contato-line__icon {
+  width: 48px; height: 48px;
+  border-radius: 50%;
+  background: var(--off-white);
+  display: grid;
+  place-items: center;
+  color: var(--navy-deep);
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.contato-line:nth-child(1):hover .contato-line__icon { background: var(--whatsapp);     color: var(--white);       transform: rotate(-8deg); }
+.contato-line:nth-child(2):hover .contato-line__icon { background: var(--whatsapp);     color: var(--white);       transform: rotate(-8deg); }
+.contato-line:nth-child(3):hover .contato-line__icon { background: var(--pink-hot);     color: var(--white);       transform: rotate(-8deg); }
+.contato-line:nth-child(4):hover .contato-line__icon { background: var(--blue-vibrant); color: var(--white);       transform: rotate(-8deg); }
+.contato-line:nth-child(5):hover .contato-line__icon { background: var(--yellow-gold);  color: var(--navy-deep);   transform: rotate(-8deg); }
+
+.contato-line__label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.contato-line__value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+  color: var(--navy-deep);
+  letter-spacing: -0.005em;
+}
+.contato-line__arrow {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--gray-mid);
+  transition: transform var(--transition), color var(--transition);
+}
+.contato-line:hover .contato-line__arrow { transform: translateX(8px); color: var(--pink-hot); }
+
+.contato__horarios {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 28px 32px;
+  background: var(--navy-deep);
+  color: var(--white);
+  border-radius: var(--radius-xl);
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.contato__horarios::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 180px; height: 180px;
+  border-radius: 50%;
+  background: var(--pink-hot);
+  opacity: 0.2;
+}
+.contato__horarios-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--yellow-gold);
+  position: relative;
+  z-index: 1;
+}
+.contato__horarios-text {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+.contato__horarios-text strong { font-style: italic; color: var(--yellow-gold); font-weight: 700; }

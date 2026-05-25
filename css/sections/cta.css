@@ -1,0 +1,92 @@
+/* ============================================
+   CTA / AGENDAMENTO — Marquee + big action
+   ============================================ */
+.section--cta {
+  background: var(--navy-deep);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+.cta__decor { position: absolute; inset: 0; overflow: hidden; pointer-events: none; }
+.cta__decor .blob--pink   { top: 20%;  right: 8%;   opacity: 0.22; }
+.cta__decor .blob--yellow { bottom: 15%; left: 5%;  opacity: 0.18; }
+.cta__decor .blob--teal   { top: 40%;  right: -60px; opacity: 0.25; }
+
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 0;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.15);
+}
+.marquee__track {
+  display: inline-flex;
+  gap: 0;
+  align-items: center;
+  animation: marquee-scroll 32s linear infinite;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: var(--white);
+  will-change: transform;
+  backface-visibility: hidden;
+}
+.marquee__track > span { flex-shrink: 0; margin-right: 40px; }
+.marquee__dot { color: var(--yellow-gold); font-size: 0.7em; margin-right: 40px; }
+.marquee--reverse .marquee__track { animation-name: marquee-scroll-reverse; color: var(--pink-light); }
+.marquee--reverse .marquee__dot  { color: var(--teal); }
+
+@keyframes marquee-scroll         { from { transform: translateX(0);    } to { transform: translateX(-50%); } }
+@keyframes marquee-scroll-reverse { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__track { animation: none; }
+}
+
+.cta__inner {
+  text-align: center;
+  padding: clamp(96px, 14vw, 160px) 32px;
+  max-width: 980px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+.cta__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
+  margin-bottom: 28px;
+}
+.cta__title-em {
+  display: block;
+  font-style: italic;
+  font-weight: 500;
+  background: linear-gradient(to right, var(--yellow-gold), var(--pink-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  margin: 4px 0;
+}
+.cta__lead {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+  opacity: 0.85;
+  line-height: 1.6;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta__actions {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}

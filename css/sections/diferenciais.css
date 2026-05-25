@@ -1,0 +1,69 @@
+/* ============================================
+   DIFERENCIAIS — Editorial numbered list
+   ============================================ */
+.section--diferenciais { background: var(--off-white); position: relative; overflow: hidden; }
+.section--diferenciais::before {
+  content: '';
+  position: absolute;
+  top: 10%; left: -100px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: var(--yellow-pale);
+  opacity: 0.6;
+  filter: blur(40px);
+}
+.section--diferenciais .eyebrow { color: #B45309; background: var(--yellow-pale); }
+
+.diff-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  max-width: 1060px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.diff-pill {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 28px 36px;
+  border-radius: 40px;
+  max-width: 360px;
+  flex: 1 1 280px;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+.diff-pill:hover { transform: translateY(-8px) rotate(-0.4deg); box-shadow: var(--shadow-lg); }
+
+.diff-pill--1 { background: var(--navy-deep); }
+.diff-pill--2 { background: var(--pink-hot); }
+.diff-pill--3 { background: var(--yellow-gold); }
+.diff-pill--4 { background: var(--blue-vibrant); }
+.diff-pill--5 { background: var(--teal); }
+.diff-pill--6 { background: var(--pink-pale); border: 2px solid var(--pink-light); }
+
+.diff-pill__title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.diff-pill--1 .diff-pill__title { color: var(--white); }
+.diff-pill--2 .diff-pill__title { color: var(--white); }
+.diff-pill--3 .diff-pill__title { color: var(--navy-deep); }
+.diff-pill--4 .diff-pill__title { color: var(--white); }
+.diff-pill--5 .diff-pill__title { color: var(--navy-deep); }
+.diff-pill--6 .diff-pill__title { color: var(--pink-hot); }
+
+.diff-pill__desc { font-size: 0.88rem; line-height: 1.55; opacity: 0.82; }
+.diff-pill--1 .diff-pill__desc { color: var(--blue-pale); }
+.diff-pill--2 .diff-pill__desc { color: var(--white); }
+.diff-pill--3 .diff-pill__desc { color: var(--navy-deep); }
+.diff-pill--4 .diff-pill__desc { color: var(--blue-pale); }
+.diff-pill--5 .diff-pill__desc { color: var(--navy-deep); }
+.diff-pill--6 .diff-pill__desc { color: var(--pink-hot); }

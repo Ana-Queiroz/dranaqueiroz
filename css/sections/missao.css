@@ -1,0 +1,67 @@
+/* ============================================
+   MISSÃO — Split-screen
+   ============================================ */
+.section--missao { padding: 0 !important; background: var(--off-white); }
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: clamp(440px, 60vh, 600px);
+}
+.split__panel {
+  padding: clamp(48px, 7vw, 96px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.split__panel--light { background: var(--off-white); }
+.split__panel--dark  { background: var(--grad-brand); color: var(--white); }
+.split__panel .eyebrow { background: var(--pink-pale); color: var(--pink-hot); margin-bottom: 32px; }
+.split__panel--dark .eyebrow { background: rgba(255, 255, 255, 0.14); color: var(--white); }
+
+.split__text {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.4rem, 2.6vw, 1.85rem);
+  line-height: 1.4;
+  color: var(--navy-deep);
+  max-width: 480px;
+  position: relative;
+  z-index: 1;
+}
+.split__text em {
+  font-style: italic;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.split__panel--dark .split__text { color: var(--white); }
+.split__panel--dark .split__text em {
+  background: linear-gradient(to right, var(--yellow-gold), var(--pink-light));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.split__rule { border: none; border-top: 1px solid var(--gray-light); margin-top: 32px; width: 100%; position: relative; z-index: 1; }
+.split__signature {
+  margin-top: 32px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid rgba(248, 250, 255, 0.2);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--yellow-gold);
+  line-height: 1.5;
+  position: relative;
+  z-index: 1;
+}
+
+.split__deco { position: absolute; border-radius: 50%; pointer-events: none; }
+.split__deco--pink  { width: 280px; height: 280px; background: var(--pink-pale);   opacity: 0.7;  top: -120px; right: -120px; }
+.split__deco--yellow{ width: 180px; height: 180px; background: var(--yellow-pale); opacity: 0.7;  bottom: -60px; left: -60px; }
+.split__deco--teal  { width: 240px; height: 240px; background: var(--teal);        opacity: 0.18; top: -100px; left: -50px; }
+.split__deco--blue  { width: 200px; height: 200px; background: var(--pink-hot);    opacity: 0.22; bottom: -80px; right: -50px; }

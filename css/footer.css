@@ -1,0 +1,67 @@
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  background: var(--off-white);
+  color: var(--navy-deep);
+  padding: 64px 0 32px;
+  position: relative;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--gray-light);
+}
+.footer__name   { font-family: var(--font-display); font-weight: 700; font-size: clamp(1.75rem, 3vw, 2.5rem); margin-bottom: 8px; letter-spacing: -0.01em; }
+.footer__slogan { font-family: var(--font-display); font-style: italic; font-size: 1.05rem; color: var(--pink-hot); }
+.footer__crm    { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.08em; color: var(--text-muted); text-align: right; }
+.footer__crm span { color: var(--text); font-weight: 700; margin-right: 6px; }
+.footer__sep { color: var(--gray-mid) !important; font-weight: 400 !important; margin: 0 8px !important; }
+
+.footer__mid { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; padding: 32px 0; }
+.footer__nav { display: flex; gap: 28px; flex-wrap: wrap; }
+.footer__nav a { font-size: 0.92rem; font-weight: 500; color: var(--gray-text); transition: color var(--transition); position: relative; }
+.footer__nav a:hover { color: var(--pink-hot); }
+
+.footer__social { display: flex; gap: 10px; }
+.footer__social-link {
+  display: grid;
+  place-items: center;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--white);
+  color: var(--navy-deep);
+  border: 1px solid var(--gray-light);
+  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+}
+.footer__social-link:hover { transform: translateY(-3px) scale(1.05); background: var(--pink-hot); color: var(--white); border-color: var(--pink-hot); }
+
+.footer__copy { text-align: center; font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: 0.08em; color: var(--gray-mid); margin-top: 16px; }
+
+/* ============================================
+   WHATSAPP FLOAT
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+  z-index: 90;
+  transition: transform var(--transition), box-shadow var(--transition);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+.whatsapp-float:hover { transform: scale(1.08); background: var(--whatsapp-dark); }
+
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45), 0 0 0 0 rgba(37, 211, 102, 0.55); }
+  50%       { box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45), 0 0 0 14px rgba(37, 211, 102, 0); }
+}

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dra. Ana Queiroz — Médica Pediatra. Cuidado pediátrico com excelência, acolhimento e acompanhamento próximo, da sala de parto à adolescência." />
+  <meta name="theme-color" content="#6B8FA3" />
+  <title>Dra. Ana Queiroz — Médica Pediatra</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="Dra. Ana Queiroz — Pediatra">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M14 22c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="16.5" cy="17" r="1" fill="currentColor"/>
+            <circle cx="23.5" cy="17" r="1" fill="currentColor"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Dra. Ana Queiroz</span>
+          <span class="brand__role">Médica Pediatra</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="navMenu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#formacao">Formação</a></li>
+          <li><a href="#abordagem">Abordagem</a></li>
+          <li><a href="#areas">Áreas</a></li>
+          <li><a href="#diferenciais">Diferenciais</a></li>
+          <li><a href="#agendamento" class="nav-cta">Agendar</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <p class="eyebrow">Pediatria com vínculo</p>
+          <h1 class="hero__title">
+            Mais do que cuidar de crianças:
+            <span>criar laços para a vida toda.</span>
+          </h1>
+          <p class="hero__lead">
+            Cuidado pediátrico com excelência, acolhimento e acompanhamento próximo —
+            da sala de parto à adolescência.
+          </p>
+          <div class="hero__actions">
+            <a href="https://wa.me/5524988332023?text=Ol%C3%A1%20Dra.%20Ana%20Queiroz%2C%20gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20filho(a)." target="_blank" rel="noopener" class="btn btn--primary">Agendar consulta</a>
+            <a href="#sobre" class="btn btn--ghost">Conheça meu trabalho</a>
+          </div>
+        </div>
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="hero__circle hero__circle--lg"></div>
+          <div class="hero__circle hero__circle--md"></div>
+          <div class="hero__circle hero__circle--sm"></div>
+          <svg class="hero__illustration" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                <stop offset="0%" stop-color="#6B8FA3"/>
+                <stop offset="100%" stop-color="#4A6E82"/>
+              </linearGradient>
+            </defs>
+            <circle cx="200" cy="200" r="150" fill="url(#g1)" opacity="0.95"/>
+            <path d="M200 250 c-32 0 -58 -22 -58 -50 v-12 c0 -32 26 -58 58 -58 s58 26 58 58 v12 c0 28 -26 50 -58 50z" fill="#F7F3EE" opacity="0.95"/>
+            <path d="M142 200 c0 -32 26 -58 58 -58 s58 26 58 58 c0 8 -8 14 -16 12 c-12 -3 -28 -8 -42 -8 s-30 5 -42 8 c-8 2 -16 -4 -16 -12z" fill="#C9B49A" opacity="0.85"/>
+            <circle cx="180" cy="195" r="3.5" fill="#4A6E82"/>
+            <circle cx="220" cy="195" r="3.5" fill="#4A6E82"/>
+            <path d="M188 220 q12 8 24 0" stroke="#4A6E82" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <circle cx="170" cy="210" r="3" fill="#E8B5A6" opacity="0.7"/>
+            <circle cx="230" cy="210" r="3" fill="#E8B5A6" opacity="0.7"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="section section--about" id="sobre">
+      <div class="container two-col">
+        <div class="reveal">
+          <p class="eyebrow">Sobre mim</p>
+          <h2 class="section__title">Cuidado integral, escuta sensível.</h2>
+        </div>
+        <div class="prose reveal">
+          <p>Sou médica pediatra dedicada ao cuidado integral da criança e ao acolhimento das famílias em cada fase do desenvolvimento.</p>
+          <p>Minha prática une medicina baseada em evidências a uma escuta atenta e sensível, respeitando a individualidade de cada criança e o contexto de cada família. Acredito que um bom cuidado começa pelo vínculo — e é a partir dele que construímos decisões mais seguras, leves e assertivas.</p>
+          <p>Sou formada pela <strong>Universidade de Vassouras</strong> e especialista em Pediatria pelo <strong>Instituto Fernandes Figueira (FioCruz)</strong>, centro de referência no cuidado materno-infantil.</p>
+          <p>Atualmente, atuo em diferentes cenários assistenciais — incluindo emergência e enfermaria — o que fortalece meu olhar clínico e minha capacidade de conduzir desde situações comuns até quadros mais complexos com segurança.</p>
+          <p class="prose__highlight">Meu compromisso é oferecer um acompanhamento próximo, confiável e humano — para que você nunca se sinta sozinho(a) no cuidado com seu filho.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMAÇÃO -->
+    <section class="section section--formacao" id="formacao">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="eyebrow">Formação e experiência</p>
+          <h2 class="section__title">Trajetória e atuação</h2>
+        </div>
+
+        <div class="credentials">
+          <article class="credential reveal">
+            <h3>Médica</h3>
+            <p class="credential__id">CRM: 52.0121625-2</p>
+            <p class="credential__inst">Universidade de Vassouras</p>
+          </article>
+          <article class="credential reveal">
+            <h3>Pediatra</h3>
+            <p class="credential__id">RQE: 60445</p>
+            <p class="credential__inst">Instituto Fernandes Figueira – FioCruz</p>
+          </article>
+        </div>
+
+        <div class="experience reveal">
+          <h3 class="experience__title">Atuação profissional atual</h3>
+          <ul class="experience__list">
+            <li>
+              <span class="experience__dot" aria-hidden="true"></span>
+              <span>Médica plantonista da emergência e da enfermaria do <strong>Hospital Glória D'Or</strong></span>
+            </li>
+            <li>
+              <span class="experience__dot" aria-hidden="true"></span>
+              <span>Médica da enfermaria do <strong>Instituto Fernandes Figueira – FioCruz</strong></span>
+            </li>
+            <li>
+              <span class="experience__dot" aria-hidden="true"></span>
+              <span>Médica da enfermaria do <strong>Hospital Pasteur</strong></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABORDAGEM -->
+    <section class="section section--abordagem" id="abordagem">
+      <div class="container two-col">
+        <div class="reveal">
+          <p class="eyebrow">Minha abordagem</p>
+          <h2 class="section__title">Pediatria que acolhe, orienta e caminha junto.</h2>
+        </div>
+        <div class="prose reveal">
+          <p>Aqui, cada consulta é pensada como um espaço de escuta, orientação e construção conjunta.</p>
+          <p>Valorizo atendimentos sem pressa, onde há tempo para entender a criança como um todo, esclarecer dúvidas e orientar com clareza e segurança. Mais do que tratar doenças, meu objetivo é antecipar riscos, promover saúde e apoiar as famílias nas decisões do dia a dia.</p>
+          <blockquote class="quote">
+            "Crescendo juntos, com afeto e confiança."
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ÁREAS -->
+    <section class="section section--areas" id="areas">
+      <div class="areas__deco" aria-hidden="true"></div>
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="eyebrow">Áreas de atuação</p>
+          <h2 class="section__title">Como posso cuidar do seu filho</h2>
+        </div>
+
+        <div class="areas-tabs reveal">
+          <div class="areas-tabs__list" role="tablist" aria-label="Áreas de atuação">
+            <button type="button" class="areas-tab is-active" role="tab" aria-selected="true" aria-controls="area-panel" data-area="parto">
+              <span class="areas-tab__label">Sala de parto</span>
+              <span class="areas-tab__indicator" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="areas-tab" role="tab" aria-selected="false" aria-controls="area-panel" data-area="puericultura">
+              <span class="areas-tab__label">Puericultura</span>
+              <span class="areas-tab__indicator" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="areas-tab" role="tab" aria-selected="false" aria-controls="area-panel" data-area="alimentacao">
+              <span class="areas-tab__label">Orientação alimentar</span>
+              <span class="areas-tab__indicator" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="areas-tab" role="tab" aria-selected="false" aria-controls="area-panel" data-area="intercorrencias">
+              <span class="areas-tab__label">Intercorrências pediátricas</span>
+              <span class="areas-tab__indicator" aria-hidden="true"></span>
+            </button>
+            <button type="button" class="areas-tab" role="tab" aria-selected="false" aria-controls="area-panel" data-area="familia">
+              <span class="areas-tab__label">Apoio às famílias</span>
+              <span class="areas-tab__indicator" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <div class="areas-tabs__dots" aria-hidden="true">
+            <button class="areas-dot is-active" data-area="parto"></button>
+            <button class="areas-dot" data-area="puericultura"></button>
+            <button class="areas-dot" data-area="alimentacao"></button>
+            <button class="areas-dot" data-area="intercorrencias"></button>
+            <button class="areas-dot" data-area="familia"></button>
+          </div>
+
+          <div class="areas-tabs__panel" id="area-panel" role="tabpanel">
+            <!-- Parto -->
+            <article class="area-detail is-active" data-area="parto">
+              <svg class="area-detail__art" viewBox="0 0 80 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="34" fill="#D6E8EF" opacity="0.55"/>
+                <path d="M 18 52 Q 40 38 62 52" stroke="#6B8FA3" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+                <circle cx="40" cy="40" r="8" fill="#C9B49A"/>
+                <path d="M 40 24 L 40 19" stroke="#4A6E82" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M 30 27 L 26 22" stroke="#4A6E82" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M 50 27 L 54 22" stroke="#4A6E82" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <h3 class="area-detail__title">Sala de parto</h3>
+              <p class="area-detail__text">Acompanhamento do nascimento e primeiros cuidados com o recém-nascido — segurança e acolhimento desde os primeiros momentos de vida.</p>
+            </article>
+
+            <!-- Puericultura -->
+            <article class="area-detail" data-area="puericultura">
+              <svg class="area-detail__art" viewBox="0 0 80 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="34" fill="#D6E8EF" opacity="0.55"/>
+                <path d="M 22 58 Q 32 50 40 44 T 60 24" stroke="#6B8FA3" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-dasharray="0.5 3"/>
+                <circle cx="22" cy="58" r="3" fill="#C9B49A"/>
+                <circle cx="40" cy="44" r="4.5" fill="#6B8FA3"/>
+                <circle cx="60" cy="24" r="6" fill="#4A6E82"/>
+              </svg>
+              <h3 class="area-detail__title">Puericultura</h3>
+              <p class="area-detail__text">Acompanhamento do crescimento, desenvolvimento e saúde da criança ao longo do tempo — cada fase com a atenção que merece.</p>
+            </article>
+
+            <!-- Alimentação -->
+            <article class="area-detail" data-area="alimentacao">
+              <svg class="area-detail__art" viewBox="0 0 80 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="34" fill="#D6E8EF" opacity="0.55"/>
+                <path d="M 26 56 Q 22 30 50 24 Q 56 50 26 56 Z" fill="#C9B49A" opacity="0.55"/>
+                <path d="M 26 56 Q 22 30 50 24 Q 56 50 26 56 Z" stroke="#4A6E82" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+                <path d="M 26 56 Q 38 42 50 24" stroke="#4A6E82" stroke-width="1.1" fill="none" opacity="0.6"/>
+                <path d="M 50 24 L 54 18" stroke="#6B8FA3" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <h3 class="area-detail__title">Orientação alimentar e hábitos saudáveis</h3>
+              <p class="area-detail__text">Construção de uma relação saudável com a alimentação desde a infância — escolhas que se constroem no dia a dia.</p>
+            </article>
+
+            <!-- Intercorrências -->
+            <article class="area-detail" data-area="intercorrencias">
+              <svg class="area-detail__art" viewBox="0 0 80 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="34" fill="#D6E8EF" opacity="0.55"/>
+                <path d="M 14 42 L 26 42 L 32 28 L 42 54 L 50 32 L 56 42 L 66 42" stroke="#4A6E82" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="14" cy="42" r="2" fill="#C9B49A"/>
+                <circle cx="66" cy="42" r="2" fill="#C9B49A"/>
+              </svg>
+              <h3 class="area-detail__title">Intercorrências pediátricas</h3>
+              <p class="area-detail__text">Atendimento de quadros agudos com olhar criterioso e resolutivo — segurança quando você mais precisa.</p>
+            </article>
+
+            <!-- Família -->
+            <article class="area-detail" data-area="familia">
+              <svg class="area-detail__art" viewBox="0 0 80 80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="40" cy="40" r="34" fill="#D6E8EF" opacity="0.55"/>
+                <circle cx="29" cy="33" r="10" fill="#C9B49A" opacity="0.65"/>
+                <circle cx="51" cy="33" r="10" fill="#6B8FA3" opacity="0.55"/>
+                <circle cx="40" cy="52" r="10" fill="#4A6E82" opacity="0.5"/>
+                <circle cx="29" cy="33" r="10" stroke="#4A6E82" stroke-width="1.2" fill="none"/>
+                <circle cx="51" cy="33" r="10" stroke="#4A6E82" stroke-width="1.2" fill="none"/>
+                <circle cx="40" cy="52" r="10" stroke="#4A6E82" stroke-width="1.2" fill="none"/>
+              </svg>
+              <h3 class="area-detail__title">Apoio às famílias</h3>
+              <p class="area-detail__text">Orientações práticas e seguras para os desafios de cada fase — você não está sozinho(a) nessa jornada.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="section section--diferenciais" id="diferenciais">
+      <div class="container">
+        <div class="section__header reveal">
+          <p class="eyebrow">Diferenciais do atendimento</p>
+          <h2 class="section__title">O que torna meu atendimento único</h2>
+        </div>
+
+        <ul class="features">
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Consultas com tempo ampliado</span>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Acompanhamento individualizado</span>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Retorno incluído após a consulta</span>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Suporte para dúvidas após o atendimento</span>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Comunicação clara, acessível e acolhedora</span>
+          </li>
+          <li class="feature reveal">
+            <span class="feature__check" aria-hidden="true">✓</span>
+            <span>Cuidado centrado na criança e na família</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PARA QUEM / MISSÃO -->
+    <section class="section section--missao" id="missao">
+      <div class="container missao__grid">
+        <div class="missao__card reveal">
+          <p class="eyebrow">Para quem é meu atendimento</p>
+          <p class="missao__text">
+            Para famílias que buscam um cuidado pediátrico próximo, confiável e baseado em evidências —
+            mas que também valorizam acolhimento, escuta e vínculo.
+          </p>
+        </div>
+        <div class="missao__card missao__card--accent reveal">
+          <p class="eyebrow eyebrow--light">Missão</p>
+          <p class="missao__text">
+            Oferecer um cuidado pediátrico de excelência, com responsabilidade, sensibilidade e presença —
+            construindo, junto às famílias, uma base sólida para uma vida saudável.
+          </p>
+          <p class="missao__quote">"Acolhimento que atravessa o tempo, ciência que protege o agora."</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- AGENDAMENTO -->
+    <section class="section section--cta" id="agendamento">
+      <div class="container cta__inner reveal">
+        <p class="eyebrow eyebrow--light">Agendamento</p>
+        <h2 class="cta__title">Agende a consulta do seu filho com facilidade.</h2>
+        <p class="cta__lead">
+          Clique no botão abaixo e fale diretamente comigo para escolher o melhor horário.
+        </p>
+        <a href="https://wa.me/5524988332023?text=Ol%C3%A1%20Dra.%20Ana%20Queiroz%2C%20gostaria%20de%20agendar%20uma%20consulta%20para%20meu%20filho(a)." target="_blank" rel="noopener" class="btn btn--whatsapp">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+            <path d="M20.5 3.5A11.4 11.4 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.4 1.4h.0c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4zM12.1 21.6h0a9.7 9.7 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.6 9.6 0 0 1-1.5-5.2c0-5.4 4.4-9.7 9.8-9.7 2.6 0 5.1 1 6.9 2.9a9.6 9.6 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4-.1-.2-.3-.3-.5-.4z"/>
+          </svg>
+          <span>Agendar pelo WhatsApp</span>
+        </a>
+        <p class="cta__note">Atendimento humanizado · Resposta em horário comercial</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__name">Dra. Ana Queiroz</p>
+          <p class="footer__role">Médica Pediatra</p>
+          <p class="footer__crm">CRM: 52.0121625-2 · RQE: 60445</p>
+        </div>
+        <nav class="footer__nav" aria-label="Rodapé">
+          <a href="#sobre">Sobre</a>
+          <a href="#formacao">Formação</a>
+          <a href="#areas">Áreas</a>
+          <a href="#agendamento">Agendar</a>
+        </nav>
+      </div>
+      <p class="footer__copy">© <span id="year"></span> Dra. Ana Queiroz — Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/5524988332023?text=Ol%C3%A1%20Dra.%20Ana%20Queiroz%2C%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" aria-hidden="true">
+      <path d="M20.5 3.5A11.4 11.4 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.5 4.1 1.6 5.9L.2 24l6.5-1.7a11.7 11.7 0 0 0 5.4 1.4h.0c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4zM17.5 14.3c-.3-.1-1.7-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.3-.7.3-1.2.2-1.4-.1-.2-.3-.3-.5-.4z"/>
+    </svg>
+  </a>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
