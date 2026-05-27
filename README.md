@@ -1,6 +1,6 @@
 # Dra. Ana Carolina Queiroz — Site Institucional
 
-Site institucional da **Dra. Ana Carolina Queiroz**, médica pediatra em Petrópolis, RJ. Layout editorial com estilo magazine, desenvolvido em HTML, CSS e JavaScript puro.
+Site institucional da **Dra. Ana Carolina Queiroz**, médica pediatra em Petrópolis e Rio de Janeiro. Layout editorial com estilo magazine, desenvolvido em HTML, CSS e JavaScript puro.
 
 ---
 
@@ -11,8 +11,16 @@ Site one-page de apresentação profissional voltado para famílias que buscam p
 **Profissional:** Dra. Ana Carolina Queiroz  
 **Especialidade:** Pediatria  
 **CRM-RJ:** 1216252 · **RQE:** 60445  
-**Localização:** R. Prof. Stroeller, 428 — Casarão 13, Petrópolis, RJ  
-**Contato:** (24) 98844-0005 · [@dranaqueirozped](https://instagram.com/dranaqueirozped)
+
+**Petrópolis, RJ**  
+Endereço: R. Prof. Stroeller, 428 — Casarão 13  
+Contato: (24) 98844-0005  
+
+**Rio de Janeiro, RJ**  
+Endereço: Largo do Machado, 39 — 4º andar, Sala 08  
+Contato: (24) 98833-2023  
+
+**Instagram:** [@dranaqueirozped](https://instagram.com/dranaqueirozped)
 
 ---
 
