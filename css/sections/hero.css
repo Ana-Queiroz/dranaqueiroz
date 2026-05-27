@@ -16,7 +16,8 @@
   position: absolute;
   top: 0; bottom: 0; left: 24px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 248px;
   pointer-events: none;
   z-index: 2;
 }

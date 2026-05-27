@@ -90,3 +90,7 @@
   flex-wrap: wrap;
   align-items: center;
 }
+.cta__sub-link {
+  display: inline-flex;
+  margin-top: 24px;
+}
